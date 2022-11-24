@@ -40,23 +40,40 @@ function Tweet() {
   };
 
   return (
-    <main className="tweet-box ">
-      <section className=" d-flex justify-content-center flex-column ">
-        <section className="mx-auto ">
-          <div>
-            <Search />
-          </div>
-          <div className="">
-            <input
-              style={{ width: "647px", height: "300px" }}
-              className="register-dark  text-white  border-0"
-              onChange={(e) => setContent(e.target.value)}
-            />
-          </div>
-        </section>
+    <main className="tweet-box flex-column ">
+      <section className=" my-2 d-flex justify-content-center">
+        <div>
+          <Search />
+        </div>
+      </section>
+      <section className="d-flex justify-content-center  ">
+        <div className="border" style={{ width: "100px", height: "150px" }}>
+          <img
+            className="border "
+            src="http://store-images.s-microsoft.com/image/apps.50484.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.2c71c1ea-c28f-4dd1-b72d-c43cdd3476f4"
+            alt="err"
+            style={{
+              width: "100px",
+              objectFit: "cover",
+              height: "100%",
+            }}
+          />
+        </div>
+        <div className="">
+          <textarea
+            row={8}
+            col={20}
+            style={{ width: "545px", height: "150px" }}
+            className="register-dark  text-white  "
+            placeholder=" text"
+            onChange={(e) => setContent(e.target.value)}
+          ></textarea>
+        </div>
+      </section>
+      <section className=" my-5 d-flex justify-content-center  ">
         <div
-          className=" mx-auto d-flex justify-content-end my-2 "
-          style={{ width: "647px", height: "50px" }}
+          className=" d-flex justify-content-end"
+          style={{ width: "660px", height: "40px" }}
         >
           <button
             className="btn btn-primary rounded-pill  px-5"
@@ -66,27 +83,36 @@ function Tweet() {
           </button>
         </div>
       </section>
-      <section className="d-flex justify-content-center vh-100">
-        <li>
+
+      <section className="d-flex justify-content-center  vh-100  ">
+        <div className="" style={{ maxWidth: 650 }}>
           {list.map((item) => (
-            <div className="d-flex gap-5 text-white border m-2">
-              <p className="border w-100 ">{item.content}</p>
-              <p className="border">{item.date}</p>
-              <button
-                onClick={() => Update(item._id)}
-                className="btn btn-primary px-5 "
-              >
-                Edit
-              </button>
-              <button
-                onClick={() => Delete(item._id)}
-                className="btn btn-outline-dark px-5"
-              >
-                Delete
-              </button>
+            <div className="row border">
+              <div className="col-sm-8">
+                <p
+                  className="text-white text-wrap text-break"
+                  style={{ maxWidth: 500 }}
+                >
+                  {item.content}
+                </p>
+              </div>
+              <div className="col-sm-4 d-flex">
+                <button
+                  onClick={() => Update(item._id)}
+                  className="btn btn-primary px-5"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => Delete(item._id)}
+                  className="btn btn-warning px-5"
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           ))}
-        </li>
+        </div>
       </section>
     </main>
   );

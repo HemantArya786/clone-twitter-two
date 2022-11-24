@@ -4,8 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import Register from "./pages/Register/RegisterPage";
 import Login from "./pages/Login/LoginPages";
 import Tweet from "./pages/Tweet/TweetPages";
-import Home from "./pages/Home/HomePage";
+import Home from "./Home/HomePage";
 import Profile from "./pages/profile/ProfilePage";
+import { FaCommentsDollar } from "react-icons/fa";
 
 function App() {
   return (
