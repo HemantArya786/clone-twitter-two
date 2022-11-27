@@ -3,20 +3,16 @@ import { FiSettings } from "react-icons/fi";
 
 function Search() {
   return (
-    <main className=" gap-3 py-1 d-flex flex-row ">
-      <div>
+    <main className=" gap-3 py-1 d-flex flex-row border  ">
+      <div className="w-75 d-flex justify-contain-center">
         <input
-          style={{ width: "585px", height: "40px" }}
           placeholder="  search"
-          className="bg-dark border-0 rounded-pill  "
+          className="bg-dark border-0 w-100 text-white rounded-pill  "
         />
       </div>
-      <div>
+      <div className="d-flex w-25  ">
         <h3>
-          <FiSettings
-            className="text-white "
-            style={{ width: "25px", height: "40px" }}
-          />
+          <FiSettings className="text-white " />
         </h3>
       </div>
     </main>
