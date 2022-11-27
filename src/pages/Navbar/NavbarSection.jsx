@@ -1,7 +1,13 @@
 import React from "react";
-import { BsTwitter } from "react-icons/bs";
-import { FaHashtag } from "react-icons/fa";
-import { FiSettings } from "react-icons/fi";
+import {
+  BsTwitter,
+  BsCardList,
+  BsBell,
+  BsFillBookmarkFill,
+} from "react-icons/bs";
+import { BiSearchAlt, BiMessageDetail } from "react-icons/bi";
+import { HiHome } from "react-icons/hi";
+import { CgProfile } from "react-icons/cg";
 
 function Navbar() {
   return (
@@ -19,18 +25,63 @@ function Navbar() {
         style={{ width: "324px", height: "50px" }}
       >
         <h3>
-          <FaHashtag />
+          <HiHome />
         </h3>
-        <h3>Explore</h3>
+        <h3>Home</h3>
       </div>
       <div
         className="text-white d-flex my-3  gap-3 px-3"
         style={{ width: "324px", height: "50px" }}
       >
         <h3>
-          <FiSettings />
+          <BsBell />
         </h3>
-        <h3>Setting</h3>
+        <h3>Notification</h3>
+      </div>
+      <div
+        className="text-white d-flex my-3  gap-3 px-3"
+        style={{ width: "324px", height: "50px" }}
+      >
+        <h3>
+          <BiSearchAlt />
+        </h3>
+        <h3>Search</h3>
+      </div>
+      <div
+        className="text-white d-flex my-3  gap-3 px-3"
+        style={{ width: "324px", height: "50px" }}
+      >
+        <h3>
+          <BiMessageDetail />
+        </h3>
+        <h3>messages</h3>
+      </div>
+      <div
+        className="text-white d-flex my-3  gap-3 px-3"
+        style={{ width: "324px", height: "50px" }}
+      >
+        <h3>
+          <BsFillBookmarkFill />
+        </h3>
+        <h3>bookmark</h3>
+      </div>
+      <div
+        className="text-white d-flex my-3  gap-3 px-3"
+        style={{ width: "324px", height: "50px" }}
+      >
+        <h3>
+          <BsCardList />
+        </h3>
+        <h3>List</h3>
+      </div>
+      <div
+        className="text-white d-flex my-3  gap-3 px-3"
+        style={{ width: "324px", height: "50px" }}
+      >
+        <h3>
+          <CgProfile />
+        </h3>
+        <h3>Profile</h3>
       </div>
     </main>
   );

@@ -2,6 +2,11 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Search from "../Search/Search";
 import TweetArray from "../TweetArray/TweetArray";
+import { BsCardImage } from "react-icons/bs";
+import { AiOutlineFileGif, AiTwotoneCalendar } from "react-icons/ai";
+import { FaPollH } from "react-icons/fa";
+import { CiLocationOn } from "react-icons/ci";
+import { BsEmojiSmileFill } from "react-icons/bs";
 
 function Tweet() {
   const [list, setList] = useState([]);
@@ -48,7 +53,7 @@ function Tweet() {
             <Search />
           </div>
         </section>
-        <section className="py-3 border border-top-0">
+        <section className="py- border border-top-0">
           <div className=" d-flex ">
             <div className="col-sm-3 d-flex align-item-center">
               <img
@@ -68,13 +73,25 @@ function Tweet() {
               />
             </div>
           </div>
-          <div className="d-flex justify-content-end ">
-            <button
-              className="btn btn-primary rounded-pill  px-5"
-              onClick={Tweet}
-            >
-              Tweet
-            </button>
+          <div className="d-flex justify-content-between border ">
+            <div className="col-9 border border-danger border-3 text-primary ">
+              <h4>
+                <BsCardImage />
+                <AiOutlineFileGif />
+                <FaPollH />
+                <BsEmojiSmileFill />
+                <AiTwotoneCalendar />
+                <CiLocationOn />
+              </h4>
+            </div>
+            <div className="col-3 border border-success border-3">
+              <button
+                className="btn btn-primary rounded-pill  px-5"
+                onClick={Tweet}
+              >
+                Tweet
+              </button>
+            </div>
           </div>
         </section>
       </div>
