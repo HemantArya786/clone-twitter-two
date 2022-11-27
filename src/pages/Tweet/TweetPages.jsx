@@ -74,19 +74,28 @@ function Tweet() {
             </div>
           </div>
           <div className="d-flex justify-content-between border ">
-            <div className="col-9 border border-danger border-3 text-primary ">
-              <h4>
-                <BsCardImage />
-                <AiOutlineFileGif />
-                <FaPollH />
-                <BsEmojiSmileFill />
-                <AiTwotoneCalendar />
-                <CiLocationOn />
-              </h4>
+            <div className="col-9  border-3 text-primary ">
+              <div className="d-flex justify-content-between">
+                <div className="">
+                  <BsCardImage />
+                </div>
+                <div>
+                  <FaPollH />
+                </div>
+                <div>
+                  <BsEmojiSmileFill />
+                </div>
+                <div>
+                  <AiTwotoneCalendar />
+                </div>
+                <div>
+                  <CiLocationOn />
+                </div>
+              </div>
             </div>
-            <div className="col-3 border border-success border-3">
+            <div className="col-3   border-3">
               <button
-                className="btn btn-primary rounded-pill  px-5"
+                className="btn btn-primary rounded-pill px-5"
                 onClick={Tweet}
               >
                 Tweet

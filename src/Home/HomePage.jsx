@@ -8,15 +8,14 @@ import Tweet from "../pages/Tweet/TweetPages";
 function Home() {
   return (
     <main className="d-flex  ">
-      <section className=" w-25 position-fixed ">
+      <section className=" w-25 position-fixed  px-5">
         <div>
           <Navbar />
         </div>
       </section>
 
-      <section className=" text-white w-50 " style={{ marginLeft: 200 }}>
+      <section className=" text-white w-50 " style={{ marginLeft: 360 }}>
         <div className="d-flex  position-fixed justify-content-between Home-bar-section border border-bottom-0 border-top-0  w-50">
-          <h2>Home</h2>
           <div className="px-3">
             <h2>
               <BsStars />
@@ -28,8 +27,8 @@ function Home() {
         </div>
       </section>
       <section
-        className=" text-white position-fixed  w-25 border"
-        style={{ right: 0 }}
+        className=" text-white position-fixed  border "
+        style={{ right: 20 }}
       >
         <h1>W.I.P</h1>
       </section>

@@ -8,10 +8,11 @@ import {
 import { BiSearchAlt, BiMessageDetail } from "react-icons/bi";
 import { HiHome } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <main className=" ">
+    <main className=" container">
       <div
         className="my-3 d-flex text-white  justify-content-start px-3"
         style={{ width: "324px", height: "50px" }}
@@ -79,9 +80,15 @@ function Navbar() {
         style={{ width: "324px", height: "50px" }}
       >
         <h3>
-          <CgProfile />
+          <Link className="text-white   " to="/Profile">
+            <CgProfile />
+          </Link>
         </h3>
-        <h3>Profile</h3>
+        <h3>
+          <Link className="text-decoration-none text-white" to="/Profile">
+            Profile
+          </Link>
+        </h3>
       </div>
     </main>
   );
