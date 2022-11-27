@@ -19,7 +19,7 @@ function Tweet() {
       .delete("http://localhost:4500/tweet/" + id)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
-
+    // test
     setUpdate(!update);
   };
 
